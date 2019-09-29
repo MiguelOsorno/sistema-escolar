@@ -13,6 +13,7 @@
                 <td><?php echo $maestro_item['nombre']; ?></td>       
                 <td> <?php echo $maestro_item['apellido']; ?></td>       
                 <td><a href="<?php echo site_url('maestro/'.$maestro_item['id']); ?>">Editar</a></td>
+                <td><a href="<?php echo site_url('maestro/delete/'.$maestro_item['id']); ?>" onclick="return confirm('seguro que desea borrar?');">eliminar</a></td>
         </tr>
 <?php endforeach; ?>
 </table>

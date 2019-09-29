@@ -67,4 +67,15 @@ class Maestro_controller extends CI_Controller {
                         $this->load->view('maestro/success');
                 }
         }
+
+        public function delete($id)
+	{
+                
+                
+                $this->maestro_model->delete_maestro($id);
+                redirect("maestro/");
+	}
+
+
+      
 }

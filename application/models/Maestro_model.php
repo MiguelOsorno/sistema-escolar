@@ -38,4 +38,12 @@ class Maestro_model extends CI_Model {
                 
                 return $this->db->update('maestro', $data, array('id' => $id));
         }
+
+
+        public function delete_maestro($id)
+        {
+              return $this->db->delete('maestro', array('id' => $id)); 
+        }
+
+        
 }
