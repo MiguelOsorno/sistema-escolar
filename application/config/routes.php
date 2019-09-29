@@ -54,5 +54,6 @@ $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+$route['maestro/create'] = 'maestro_controller/create';
 $route['maestro/(:any)'] = 'maestro_controller/edit/$1';
 $route['maestro'] = 'maestro_controller';

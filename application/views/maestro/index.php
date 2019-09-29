@@ -1,5 +1,7 @@
 <h2><?php echo $title; ?></h2>
 
+<a href="<?php echo site_url('maestro/create'); ?>">Nuevo maestro</a>
+
 <table style="width:100%">
         <tr>
                 <th>Nombre</th>
