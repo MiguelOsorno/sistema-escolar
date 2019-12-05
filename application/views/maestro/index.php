@@ -8,7 +8,7 @@
                 <th>Apellido</th>
                 <th>Acciones</th>
         </tr>
-<?php foreach ($maestro as $maestro_item): ?>
+<?php foreach ($maestros as $maestro_item): ?>
         <tr>
                 <td><?php echo $maestro_item['nombre']; ?></td>       
                 <td> <?php echo $maestro_item['apellido']; ?></td>       

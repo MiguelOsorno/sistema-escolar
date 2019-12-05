@@ -1,46 +1,45 @@
 <?php
-class Maestro_controller extends CI_Controller {
+class Alumno_controller extends CI_Controller {
 
         public function __construct()
         {
                 parent::__construct();
-                $this->load->model('maestro_model');
+                $this->load->model('alumno_model');
                 $this->load->helper('url_helper');
         }
 
         public function index()
         {
-                $data['maestros'] = $this->maestro_model->get_maestros();
+                $data['alumnos']= $this->alumno_model->get_alumnos();
+                $data['title'] = 'Modulo Alumnos';
 
-                $data['title'] = 'Maestros';
-
-                $this->load->view('templates/header');
-                $this->load->view('maestro/index', $data);
+                $this->load->view('templates/header', $data);
+                $this->load->view('alumno/index');
                 $this->load->view('templates/footer');
         }
-
 
         public function create()
         {
                 $this->load->helper('form');
                 $this->load->library('form_validation');
 
-                $data['title'] = 'Nuevo maestro';
+                $data['title'] = 'Nuevo Alumno';
 
                 $this->form_validation->set_rules('nombre', 'Nombre', 'required');
                 $this->form_validation->set_rules('apellido', 'Apellido', 'required');
+                $this->form_validation->set_rules('id_grupo', 'Id_grupo', 'required');
 
                 if ($this->form_validation->run() === FALSE)
                 {
                         $this->load->view('templates/header', $data);
-                        $this->load->view('maestro/create');
+                        $this->load->view('alumno/create');
                         $this->load->view('templates/footer');
 
                 }
                 else
                 {
-                        $this->maestro_model->set_maestro();
-                        $this->load->view('maestro/success');
+                        $this->alumno_model->set_alumno();
+                        $this->load->view('alumno/success');
                 }
         }
 
@@ -53,19 +52,20 @@ class Maestro_controller extends CI_Controller {
 
                 $this->form_validation->set_rules('nombre', 'Nombre', 'required');
                 $this->form_validation->set_rules('apellido', 'Apellido', 'required');
+                $this->form_validation->set_rules('id_grupo', 'Id_grupo', 'required');
 
                 if ($this->form_validation->run() === FALSE)
                 {
-                        $data['maestro'] = $this->maestro_model->get_singleMaestro($id);
+                        $data['alumno'] = $this->alumno_model->get_singleAlumno($id);
                         $this->load->view('templates/header');
-                        $this->load->view('maestro/edit', $data);
+                        $this->load->view('alumno/edit', $data);
                         $this->load->view('templates/footer');
                 }
                 else
                 {
-                        $data = $this->maestro_model->update_maestro();
+                        $data = $this->alumno_model->update_alumno();
                         
-                        $this->load->view('maestro/success');
+                        $this->load->view('alumno/success');
                 }
         }
 
@@ -73,10 +73,8 @@ class Maestro_controller extends CI_Controller {
 	{
                 
                 
-                $this->maestro_model->delete_maestro($id);
-                redirect("maestro/");
+                $this->alumno_model->delete_alumno($id);
+                redirect("alumno/");
 	}
-
-
-      
+           
 }

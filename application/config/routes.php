@@ -50,11 +50,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 
-$route['default_controller'] = 'welcome';
+$route['default_controller'] = 'home_controller';
 $route['404_override'] = '';
-$route['translate_uri_dashes'] = FALSE;
+$route['translate_uri_dashes'] =  FALSE;
 
 $route['maestro/delete/(:any)'] = 'maestro_controller/delete/$1';
 $route['maestro/create'] = 'maestro_controller/create';
 $route['maestro/(:any)'] = 'maestro_controller/edit/$1';
 $route['maestro'] = 'maestro_controller';
+
+$route['home']= 'home_controller';
+$route['alumno/delete/(:any)'] = 'alumno_controller/delete/$1';
+$route['alumno/create'] = 'alumno_controller/create';
+$route['alumno/(:any)'] = 'alumno_controller/edit/$1';
+$route['alumno']= 'alumno_controller';
+
+$route['grupo/delete/(:any)'] = 'grupo_controller/delete/$1';
+$route['grupo/create'] = 'grupo_controller/create';
+$route['grupo/(:any)'] = 'grupo_controller/edit/$1';
+$route['grupo']= 'grupo_controller';
+
+$route['materia']= 'materia_controller';
+$route['calificacion']= 'calificacion_controller';
+
+
