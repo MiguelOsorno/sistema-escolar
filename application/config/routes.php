@@ -70,7 +70,25 @@ $route['grupo/create'] = 'grupo_controller/create';
 $route['grupo/(:any)'] = 'grupo_controller/edit/$1';
 $route['grupo']= 'grupo_controller';
 
+$route['materia/delete/(:any)'] = 'materia_controller/delete/$1';
+$route['materia/create'] = 'materia_controller/create';
+$route['materia/(:any)'] = 'materia_controller/edit/$1';
 $route['materia']= 'materia_controller';
+
+
+$route['calificacion/delete/(:any)'] = 'calificacion_controller/delete/$1';
+$route['calificacion/create'] = 'calificacion_controller/create';
+$route['calificacion/(:any)'] = 'calificacion_controller/edit/$1';
 $route['calificacion']= 'calificacion_controller';
+
+$route['clase/delete/(:any)'] = 'clase_controller/delete/$1';
+$route['clase/create'] = 'clase_controller/create';
+$route['clase/(:any)'] = 'clase_controller/edit/$1';
+$route['clase']= 'clase_controller';
+
+$route['carrera/delete/(:any)'] = 'carrera_controller/delete/$1';
+$route['carrera/create'] = 'carrera_controller/create';
+$route['carrera/(:any)'] = 'carrera_controller/edit/$1';
+$route['carrera']= 'carrera_controller';
 
 

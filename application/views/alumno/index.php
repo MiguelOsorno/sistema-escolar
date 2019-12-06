@@ -3,6 +3,7 @@
 
 <table style="width:100%">
     <tr>
+        <th>Matricula</th>
         <th>Nombre</th>
         <th>Apellido</th>
         <th>Id grupo</th>
@@ -11,6 +12,7 @@
 
     <?php foreach ($alumnos as $alumno_item):?>
         <tr>
+            <td><?php echo $alumno_item['id'];?></td>
             <td><?php echo $alumno_item["nombre"];?><td>
             <td><?php echo $alumno_item["apellido"];?></td>
             <td><?php echo $alumno_item["id_grupo"];?></td>

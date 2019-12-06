@@ -4,12 +4,14 @@
 
 <table style="width:100%">
         <tr>
+                <th>Clave</th>
                 <th>Nombre</th>
                 <th>Apellido</th>
                 <th>Acciones</th>
         </tr>
 <?php foreach ($maestros as $maestro_item): ?>
         <tr>
+                <td><?php echo $maestro_item['id']; ?></td>    
                 <td><?php echo $maestro_item['nombre']; ?></td>       
                 <td> <?php echo $maestro_item['apellido']; ?></td>       
                 <td><a href="<?php echo site_url('maestro/'.$maestro_item['id']); ?>">Editar</a></td>

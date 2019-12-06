@@ -1,19 +1,20 @@
 <?php
-class Materia_controller extends CI_Controller {
+class Carrera_controller extends CI_Controller {
+
         public function __construct()
         {
                 parent::__construct();
-                $this->load->model('materia_model');
+                $this->load->model('carrera_model');
                 $this->load->helper('url_helper');
         }
 
         public function index()
         {
-                $data['materias']= $this->materia_model->get_materias();
-                $data['title'] = 'Modulo Materias';
+                $data['carreras']= $this->carrera_model->get_carreras();
+                $data['title'] = 'Modulo Carreras';
 
                 $this->load->view('templates/header', $data);
-                $this->load->view('materia/index');
+                $this->load->view('carrera/index');
                 $this->load->view('templates/footer');
         }
 
@@ -22,23 +23,21 @@ class Materia_controller extends CI_Controller {
                 $this->load->helper('form');
                 $this->load->library('form_validation');
 
-                $data['title'] = 'Nueva Materia';
+                $data['title'] = 'Nueva carrera';
 
-                
-                $this->form_validation->set_rules('id', 'Id', 'required');
                 $this->form_validation->set_rules('nombre', 'Nombre', 'required');
                 
                 if ($this->form_validation->run() === FALSE)
                 {
                         $this->load->view('templates/header', $data);
-                        $this->load->view('materia/create');
+                        $this->load->view('carrera/create');
                         $this->load->view('templates/footer');
 
                 }
                 else
                 {
-                        $this->materia_model->set_materia();
-                        $this->load->view('materia/success');
+                        $this->carrera_model->set_carrera();
+                        $this->load->view('carrera/success');
                 }
         }
 
@@ -49,23 +48,20 @@ class Materia_controller extends CI_Controller {
 
                 $data['title'] = 'Editar';
 
-                
-              
                 $this->form_validation->set_rules('nombre', 'Nombre', 'required');
-              
 
                 if ($this->form_validation->run() === FALSE)
                 {
-                        $data['materia'] = $this->materia_model->get_singleMateria($id);
+                        $data['carrera'] = $this->carrera_model->get_singleCarrera($id);
                         $this->load->view('templates/header');
-                        $this->load->view('materia/edit', $data);
+                        $this->load->view('carrera/edit', $data);
                         $this->load->view('templates/footer');
                 }
                 else
                 {
-                        $data = $this->materia_model->update_materia();
+                        $data = $this->carrera_model->update_carrera();
                         
-                        $this->load->view('materia/success');
+                        $this->load->view('carrera/success');
                 }
         }
 
@@ -73,9 +69,8 @@ class Materia_controller extends CI_Controller {
 	{
                 
                 
-                $this->materia_model->delete_materia($id);
-                redirect("materia/");
+                $this->carrera_model->delete_carrera($id);
+                redirect("carrera/");
 	}
-           
            
 }

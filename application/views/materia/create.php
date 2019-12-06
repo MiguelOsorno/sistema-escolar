@@ -2,16 +2,14 @@
 
 <?php echo validation_errors(); ?>
 
-<?php echo form_open('maestro/create'); ?>
+<?php echo form_open('materia/create'); ?>
 
-    <label for="id">Clave:</label>
+    <label for="id">clave:</label>
     <input type="text" name="id" /><br />
 
     <label for="nombre">Nombre:</label>
     <input type="text" name="nombre" /><br />
 
-    <label for="apellido">Apellido:</label>
-    <input type="text" name="apellido" /><br />
 
     <input type="submit" name="submit" value="Crear" />
 

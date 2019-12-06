@@ -1,20 +1,20 @@
 <?php
-class Calificacion_controller extends CI_Controller {
+class Clase_controller extends CI_Controller {
 
         public function __construct()
         {
                 parent::__construct();
-                $this->load->model('calificacion_model');
+                $this->load->model('clase_model');
                 $this->load->helper('url_helper');
         }
 
         public function index()
         {
-                $data['calificaciones']= $this->calificacion_model->get_calificaciones();
-                $data['title'] = 'Modulo Calificaciones';
+                $data['clases']= $this->clase_model->get_clases();
+                $data['title'] = 'Modulo clases';
 
                 $this->load->view('templates/header', $data);
-                $this->load->view('calificacion/index');
+                $this->load->view('clase/index');
                 $this->load->view('templates/footer');
         }
 
@@ -23,25 +23,24 @@ class Calificacion_controller extends CI_Controller {
                 $this->load->helper('form');
                 $this->load->library('form_validation');
 
-                $data['title'] = 'Nueva Calificacion';
+                $data['title'] = 'Nueva Clase';
 
+                $this->form_validation->set_rules('id_grupo', 'Id_grupo', 'required');
                 $this->form_validation->set_rules('id_materia', 'Id_materia', 'required');
-                $this->form_validation->set_rules('id_alumno', 'Id_alumno', 'required');
+                $this->form_validation->set_rules('horario', 'Horario', 'required');
                 $this->form_validation->set_rules('id_maestro','Id_maestro','required');
-                $this->form_validation->set_rules('valor', 'Valor', 'required');
-                $this->form_validation->set_rules('estado', 'Estado', 'required');
 
                 if ($this->form_validation->run() === FALSE)
                 {
                         $this->load->view('templates/header', $data);
-                        $this->load->view('calificacion/create');
+                        $this->load->view('clase/create');
                         $this->load->view('templates/footer');
 
                 }
                 else
                 {
-                        $this->calificacion_model->set_calificacion();
-                        $this->load->view('calificacion/success');
+                        $this->clase_model->set_clase();
+                        $this->load->view('clase/success');
                 }
         }
 
@@ -52,24 +51,23 @@ class Calificacion_controller extends CI_Controller {
 
                 $data['title'] = 'Editar';
 
+                $this->form_validation->set_rules('id_grupo', 'Id_grupo', 'required');
                 $this->form_validation->set_rules('id_materia', 'Id_materia', 'required');
-                $this->form_validation->set_rules('id_alumno', 'Id_alumno', 'required');
+                $this->form_validation->set_rules('horario', 'Horario', 'required');
                 $this->form_validation->set_rules('id_maestro','Id_maestro','required');
-                $this->form_validation->set_rules('valor', 'Valor', 'required');
-                $this->form_validation->set_rules('estado', 'Estado', 'required');
 
                 if ($this->form_validation->run() === FALSE)
                 {
-                        $data['calificacion'] = $this->calificacion_model->get_singleCalificacion($id);
+                        $data['clase'] = $this->clase_model->get_singleClase($id);
                         $this->load->view('templates/header');
-                        $this->load->view('calificacion/edit', $data);
+                        $this->load->view('clase/edit', $data);
                         $this->load->view('templates/footer');
                 }
                 else
                 {
-                        $data = $this->calificacion_model->update_calificacion();
+                        $data = $this->clase_model->update_clase();
                         
-                        $this->load->view('calificacion/success');
+                        $this->load->view('clase/success');
                 }
         }
 
@@ -77,9 +75,8 @@ class Calificacion_controller extends CI_Controller {
 	{
                 
                 
-                $this->calificacion_model->delete_calificacion($id);
-                redirect("calificacion/");
+                $this->clase_model->delete_clase($id);
+                redirect("clase/");
 	}
-           
            
 }

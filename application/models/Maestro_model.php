@@ -22,6 +22,7 @@ class Maestro_model extends CI_Model {
         public function set_maestro()
         {
                 $data = array(
+                        'id'=>$this->input->post('id'),
                         'nombre' => $this->input->post('nombre'),
                         'apellido' => $this->input->post('apellido')
                 );

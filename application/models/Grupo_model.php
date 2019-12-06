@@ -22,10 +22,11 @@ class Grupo_model extends CI_Model {
         public function set_grupo()
         {
                 $data = array(
+                        'id'=>$this->input->post('id'),
                         'grado' => $this->input->post('grado'),
                         'letra' => $this->input->post('letra'),
                         'turno' => $this->input->post('turno'),
-                        'carrera' => $this->input->post('carrera')
+                        'id_carrera' => $this->input->post('id_carrera')
                 );
                  return $this->db->insert('grupo', $data);
         }
@@ -37,7 +38,7 @@ class Grupo_model extends CI_Model {
                        'grado' => $this->input->post('grado'),
                        'letra' => $this->input->post('letra'),
                        'turno' => $this->input->post('turno'), 
-                       'carrera' => $this->input->post('carrera')
+                       'id_carrera' => $this->input->post('id_carrera')
                 );
                 
                 return $this->db->update('grupo', $data, array('id' => $id));

@@ -22,6 +22,7 @@ class Alumno_model extends CI_Model {
         public function set_alumno()
         {
                 $data = array(
+                        'id'=>$this->input->post('id'),
                         'nombre' => $this->input->post('nombre'),
                         'apellido' => $this->input->post('apellido'),
                         'id_grupo' =>$this->input->post('id_grupo')

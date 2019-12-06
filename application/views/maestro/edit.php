@@ -5,7 +5,7 @@
 
 <?php echo form_open('maestro/edit'); ?>
 
-    <label>ID</label>
+    <label>Clave</label>
     <input readonly name="id" value="<?php echo $maestro["id"]?>" />
 
     <label for="nombre">Nombre:</label>

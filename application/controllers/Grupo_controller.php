@@ -25,10 +25,12 @@ class Grupo_controller extends CI_Controller {
 
                 $data['title'] = 'Nuevo grupo';
 
-                $this->form_validation->set_rules('grado', 'Gombre', 'required');
+                
+                $this->form_validation->set_rules('id', 'Id', 'required');
+                $this->form_validation->set_rules('grado', 'grado', 'required');
                 $this->form_validation->set_rules('letra', 'Letra', 'required');
                 $this->form_validation->set_rules('turno', 'Turno', 'required');
-                $this->form_validation->set_rules('carrera', 'Carrera', 'required');
+                $this->form_validation->set_rules('id_carrera', 'Id_carrera', 'required');
 
                 if ($this->form_validation->run() === FALSE)
                 {
@@ -51,10 +53,12 @@ class Grupo_controller extends CI_Controller {
 
                 $data['title'] = 'Editar';
 
-                $this->form_validation->set_rules('grado', 'Gombre', 'required');
+                
+              
+                $this->form_validation->set_rules('grado', 'Grado', 'required');
                 $this->form_validation->set_rules('letra', 'Letra', 'required');
                 $this->form_validation->set_rules('turno', 'Turno', 'required');
-                $this->form_validation->set_rules('carrera', 'Carrera', 'required');
+                $this->form_validation->set_rules('id_carrera', 'Id_carrera', 'required');
 
                 if ($this->form_validation->run() === FALSE)
                 {

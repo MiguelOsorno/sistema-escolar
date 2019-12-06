@@ -5,7 +5,7 @@
 
 <?php echo form_open('alumno/edit'); ?>
 
-    <label>ID</label>
+    <label>Matricula</label>
     <input readonly name="id" value="<?php echo $alumno["id"]?>" />
 
     <label for="nombre">Nombre:</label>

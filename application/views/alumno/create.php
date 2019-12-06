@@ -4,6 +4,9 @@
 
 <?php echo form_open('alumno/create'); ?>
 
+    <label for="id">Matricula:</label>
+    <input type="text" name="id" /><br />
+
     <label for="nombre">Nombre:</label>
     <input type="text" name="nombre" /><br />
 

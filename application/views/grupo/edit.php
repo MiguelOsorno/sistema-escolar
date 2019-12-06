@@ -5,7 +5,7 @@
 
 <?php echo form_open('grupo/edit'); ?>
 
-    <label>ID</label>
+    <label>Identificador</label>
     <input readonly name="id" value="<?php echo $grupo["id"]?>" />
 
     <label for="grado">Grado:</label>
@@ -17,8 +17,8 @@
     <label for="turno">Turno:</label>
     <input type="text"  value="<?php echo $grupo["turno"] ?>" name="turno" /><br />
 
-    <label for="carrera">Carrera:</label>
-    <input type="text"  value="<?php echo $grupo["carrera"] ?>" name="carrera" /><br />
+    <label for="id_carrera">Id_carrera:</label>
+    <input type="text"  value="<?php echo $grupo["id_carrera"] ?>" name="id_carrera" /><br />
 
     <input type="submit" name="submit" value="Actualizar" />
 

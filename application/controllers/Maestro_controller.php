@@ -27,6 +27,8 @@ class Maestro_controller extends CI_Controller {
 
                 $data['title'] = 'Nuevo maestro';
 
+                
+                $this->form_validation->set_rules('id', 'Id', 'required');
                 $this->form_validation->set_rules('nombre', 'Nombre', 'required');
                 $this->form_validation->set_rules('apellido', 'Apellido', 'required');
 
@@ -51,6 +53,8 @@ class Maestro_controller extends CI_Controller {
 
                 $data['title'] = 'Editar';
 
+                
+                
                 $this->form_validation->set_rules('nombre', 'Nombre', 'required');
                 $this->form_validation->set_rules('apellido', 'Apellido', 'required');
 
