@@ -8,8 +8,7 @@
     <label>Identificador</label>
     <input readonly name="id" value="<?php echo $grupo["id"]?>" />
 
-    <label for="grado">Grado:</label>
-    <input type="text" value="<?php echo $grupo["grado"]?>" name="grado" /><br />
+  
 
     <label for="letra">Letra:</label>
     <input type="text"  value="<?php echo $grupo["letra"] ?>" name="letra" /><br />

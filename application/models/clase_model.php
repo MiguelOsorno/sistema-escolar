@@ -22,6 +22,7 @@ class Clase_model extends CI_Model {
         public function set_clase()
         {
                 $data = array(
+                        'id'=>$this->input->post('id'),
                         'id_grupo' => $this->input->post('id_grupo'),
                         'id_materia' => $this->input->post('id_materia'),
                         'horario' =>$this->input->post('horario'),

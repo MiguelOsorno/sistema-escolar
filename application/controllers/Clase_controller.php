@@ -25,6 +25,7 @@ class Clase_controller extends CI_Controller {
 
                 $data['title'] = 'Nueva Clase';
 
+                $this->form_validation->set_rules('id', 'Id', 'required');
                 $this->form_validation->set_rules('id_grupo', 'Id_grupo', 'required');
                 $this->form_validation->set_rules('id_materia', 'Id_materia', 'required');
                 $this->form_validation->set_rules('horario', 'Horario', 'required');

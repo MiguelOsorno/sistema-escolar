@@ -5,7 +5,7 @@
 
 <?php echo form_open('carrera/edit'); ?>
 
-    <label>ID</label>
+    <label>Identificador</label>
     <input readonly name="id" value="<?php echo $carrera["id"]?>" />
 
     <label for="nombre">Nombre:</label>

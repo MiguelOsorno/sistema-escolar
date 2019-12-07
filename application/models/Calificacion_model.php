@@ -22,6 +22,7 @@ class Calificacion_model extends CI_Model {
         public function set_calificacion()
         {
                 $data = array(
+                        'id'=>$this->input->post('id'),
                         'id_materia' => $this->input->post('id_materia'),
                         'id_alumno' => $this->input->post('id_alumno'),
                         'id_maestro'=> $this->input->post('id_maestro'),

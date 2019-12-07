@@ -23,7 +23,6 @@ class Grupo_model extends CI_Model {
         {
                 $data = array(
                         'id'=>$this->input->post('id'),
-                        'grado' => $this->input->post('grado'),
                         'letra' => $this->input->post('letra'),
                         'turno' => $this->input->post('turno'),
                         'id_carrera' => $this->input->post('id_carrera')
@@ -35,7 +34,7 @@ class Grupo_model extends CI_Model {
         {
                 $id= $this->input->post("id");
                 $data = array(
-                       'grado' => $this->input->post('grado'),
+                      
                        'letra' => $this->input->post('letra'),
                        'turno' => $this->input->post('turno'), 
                        'id_carrera' => $this->input->post('id_carrera')

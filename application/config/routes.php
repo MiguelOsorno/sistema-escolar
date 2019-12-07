@@ -92,3 +92,7 @@ $route['carrera/(:any)'] = 'carrera_controller/edit/$1';
 $route['carrera']= 'carrera_controller';
 
 
+$route['consultarCalificacion']='consultarCalificacion_controller';
+$route['consultarCalificacion/formulario']='consultarCalificacion_controller/formulario';
+
+

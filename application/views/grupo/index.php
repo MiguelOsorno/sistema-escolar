@@ -4,7 +4,7 @@
 <table style="width:100%">
     <tr>
         <th>Identificador</th>
-        <th>Grado</th>
+       
         <th>Letra</th>
         <th>turno</th>
         <th>Id_carrera</th>
@@ -14,7 +14,7 @@
     <?php foreach ($grupos as $grupo_item):?>
         <tr>
             <td><?php echo $grupo_item["id"];?></td>
-            <td><?php echo $grupo_item["grado"];?></td>
+          
             <td><?php echo $grupo_item["letra"];?></td>
             <td><?php echo $grupo_item["turno"];?></td>
             <td><?php echo $grupo_item["id_carrera"];?></td>

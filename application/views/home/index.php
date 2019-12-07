@@ -13,6 +13,8 @@
 <a href="<?php echo site_url('alumno');?>">modulo alumnos</a>
 <br>
 <a href="<?php echo site_url('calificacion');?>">modulo calificacion</a>
+<br>
+<a href="<?php echo site_url('consultarCalificacion');?>">mas opciones</a>
 
 
 

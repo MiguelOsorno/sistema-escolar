@@ -5,7 +5,7 @@ use sistemaescolar;
 create table maestro(
     id int not null,
     nombre varchar(30) not null,
-    apellidos varchar(30) not,
+    apellido varchar(30) not null,
     primary key(id)
 );
 
@@ -16,14 +16,13 @@ create table materia(
 );
 
 create table carrera(
-    id int AUTO_INCREMENT not null,
+    id int not null,
     nombre varchar(30) not null,
     primary key(id)
 );
 
 create table grupo(
     id int not null,
-    grado int not null,
     letra varchar(1) not null,
     turno varchar(15) not null,
     id_carrera int not null,
@@ -32,7 +31,7 @@ create table grupo(
 );
 
 create table clase(
-    id int AUTO_INCREMENT not null,
+    id int not null,
     id_grupo int not null,
     id_materia int not null,
     horario varchar(30) not null,
@@ -45,7 +44,7 @@ create table clase(
 
 
 create table alumno(
-    id int not null ,
+    id int not null,
     nombre varchar(30) not null,
     apellido varchar(30) not null,
     id_grupo int not null,
@@ -54,7 +53,7 @@ create table alumno(
 );
 
 create table calificacion(
-    id int AUTO_INCREMENT not null,
+    id int not null,
     id_materia int not null,
     id_alumno int not null,
     id_maestro int not null,

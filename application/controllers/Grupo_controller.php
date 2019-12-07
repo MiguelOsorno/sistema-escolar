@@ -27,7 +27,7 @@ class Grupo_controller extends CI_Controller {
 
                 
                 $this->form_validation->set_rules('id', 'Id', 'required');
-                $this->form_validation->set_rules('grado', 'grado', 'required');
+              
                 $this->form_validation->set_rules('letra', 'Letra', 'required');
                 $this->form_validation->set_rules('turno', 'Turno', 'required');
                 $this->form_validation->set_rules('id_carrera', 'Id_carrera', 'required');
@@ -55,7 +55,6 @@ class Grupo_controller extends CI_Controller {
 
                 
               
-                $this->form_validation->set_rules('grado', 'Grado', 'required');
                 $this->form_validation->set_rules('letra', 'Letra', 'required');
                 $this->form_validation->set_rules('turno', 'Turno', 'required');
                 $this->form_validation->set_rules('id_carrera', 'Id_carrera', 'required');

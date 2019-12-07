@@ -5,7 +5,7 @@
 
 <?php echo form_open('clase/edit'); ?>
 
-    <label>ID</label>
+    <label>Identificador</label>
     <input readonly name="id" value="<?php echo $clase["id"]?>" />
 
     <label for="id_grupo">Id_grupo:</label>

@@ -4,6 +4,9 @@
 
 <?php echo form_open('clase/create'); ?>
 
+    <label for="id">Identificador:</label>
+    <input type="text" name="id" /><br />
+
     <label for="id_grupo">Id_grupo:</label>
     <input type="text" name="id_grupo" /><br />
 

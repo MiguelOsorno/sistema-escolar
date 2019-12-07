@@ -3,6 +3,9 @@
 <?php echo validation_errors(); ?>
 
 <?php echo form_open('calificacion/create'); ?>
+ 
+    <label for="id">Identificador:</label>
+    <input type="text" name="id" /><br />
 
     <label for="id_materia">Id_materia:</label>
     <input type="text" name="id_materia" /><br />

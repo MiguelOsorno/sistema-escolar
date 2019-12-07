@@ -7,8 +7,7 @@
      <label for="id">Identificador:</label>
     <input type="text" name="id" /><br />
 
-    <label for="grado">Grado:</label>
-    <input type="text" name="grado" /><br />
+ 
 
     <label for="letra">letra:</label>
     <input type="text" name="letra" /><br />

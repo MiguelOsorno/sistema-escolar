@@ -25,6 +25,7 @@ class Calificacion_controller extends CI_Controller {
 
                 $data['title'] = 'Nueva Calificacion';
 
+                $this->form_validation->set_rules('id', 'Id', 'required');
                 $this->form_validation->set_rules('id_materia', 'Id_materia', 'required');
                 $this->form_validation->set_rules('id_alumno', 'Id_alumno', 'required');
                 $this->form_validation->set_rules('id_maestro','Id_maestro','required');
