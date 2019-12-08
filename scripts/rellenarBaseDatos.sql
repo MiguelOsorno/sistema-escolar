@@ -76,5 +76,3 @@ values(3,3,1,3,6,'aprobado');
 
 insert into calificacion
 values(4,4,1,4,5,'reprobado');
-
-///////////////////

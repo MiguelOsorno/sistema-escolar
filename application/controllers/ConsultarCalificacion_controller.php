@@ -30,14 +30,12 @@ class ConsultarCalificacion_controller extends CI_Controller {
                         $this->load->view('templates/header', $data);
                         $this->load->view('consultarCalificacion/formulario');
                         $this->load->view('templates/footer');
-
                 }
                 else
                 {
-                        
-                        $this->load->view('consultarCalificacion/consulta');
-                }
-
-                
+                        $data['title'] = 'Calificaciones';
+                        $data['calificaciones'] = $this->consultarCalificacion_model->getCalificaciones();
+                        $this->load->view('consultarCalificacion/consulta', $data);
+                }                
         }
 }
