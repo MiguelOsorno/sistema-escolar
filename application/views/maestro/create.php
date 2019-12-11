@@ -13,6 +13,12 @@
     <label for="apellido">Apellido:</label>
     <input type="text" name="apellido" /><br />
 
+    <label for="direccion">Direccion:</label>
+    <input type="text" name="direccion" /><br />
+
+    <label for="telefono">Telefono:</label>
+    <input type="text" name="telefono" /><br />
+
     <input type="submit" name="submit" value="Crear" />
 
 </form>

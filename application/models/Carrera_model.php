@@ -22,7 +22,6 @@ class Carrera_model extends CI_Model {
         public function set_carrera()
         {
                 $data = array(
-                        'id'=>$this->input->post('id'),
                         'nombre' => $this->input->post('nombre')
                 );
                  return $this->db->insert('carrera', $data); 

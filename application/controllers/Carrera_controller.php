@@ -25,7 +25,6 @@ class Carrera_controller extends CI_Controller {
 
                 $data['title'] = 'Nueva carrera';
 
-                $this->form_validation->set_rules('id','Id','required');
                 $this->form_validation->set_rules('nombre', 'Nombre', 'required');
                 
                 if ($this->form_validation->run() === FALSE)

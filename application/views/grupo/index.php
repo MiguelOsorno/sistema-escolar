@@ -7,7 +7,8 @@
        
         <th>Letra</th>
         <th>turno</th>
-        <th>Id_carrera</th>
+        <th>modalidad</th>
+        <th>Carrera</th>
         <th>Acciones</th>
     </tr>
 
@@ -17,7 +18,6 @@
           
             <td><?php echo $grupo_item["letra"];?></td>
             <td><?php echo $grupo_item["turno"];?></td>
-            <td><?php echo $grupo_item["id_carrera"];?></td>
             <td><a href="<?php echo site_url('grupo/'.$grupo_item['id']);?>">Editar</a></td>
             <td><a href="<?php echo site_url('grupo/delete/'.$grupo_item['id']); ?>" onclick="return confirm('seguro que desea borrar?');">eliminar</a></td>
         </tr>

@@ -1,5 +1,24 @@
 use sistemaescolar;
 
+insert into cuatrimestre(descripcion)
+values('primer cuatrimestre');
+
+insert into cuatrimestre(descripcion)
+values('segundo cuatrimestre');
+insert into cuatrimestre(descripcion)
+values('tercer cuatrimestre');
+insert into cuatrimestre(descripcion)
+values('cuarto cuatrimestre');
+insert into cuatrimestre(descripcion)
+values('quinto cuatrimestre');
+insert into cuatrimestre(descripcion)
+values('sexto cuatrimestre');
+insert into cuatrimestre(descripcion)
+values('septimo cuatrimestre');
+insert into cuatrimestre(descripcion)
+values('octavo cuatrimestre');
+
+
 insert into maestro 
 values(1,'miguel','lopez');
 

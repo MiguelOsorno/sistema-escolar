@@ -14,8 +14,17 @@
     <label for="apellido">Apellido:</label>
     <input type="text"  value="<?php echo $alumno["apellido"] ?>" name="apellido" /><br />
 
-    <label for="id_grupo">Id_grupo:</label>
-    <input type="text"  value="<?php echo $alumno["id_grupo"] ?>" name="id_grupo" /><br />
+    <select name="cuatrimestre">
+    <option value="1">Primer cuatrimestre</option>
+    <option value="2">segundo cuatrimestre</option>
+    <option value="3">tercer cuatrimestre</option>
+    <option value="4">cuarto cuatrimestre</option>
+    <option value="5">quinto cuatrimestre</option>
+    <option value="6">sexto cuatrimestre</option>
+    <option value="7">septimo cuatrimestre</option>
+    <option value="8">octavo cuatrimestre</option>
+    </select>
+
 
     <input type="submit" name="submit" value="Actualizar" />
 

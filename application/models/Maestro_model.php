@@ -24,7 +24,9 @@ class Maestro_model extends CI_Model {
                 $data = array(
                         'id'=>$this->input->post('id'),
                         'nombre' => $this->input->post('nombre'),
-                        'apellido' => $this->input->post('apellido')
+                        'apellido' => $this->input->post('apellido'),
+                        'direccion'=>$this->input->post('direccion'),
+                        'telefono'=>$this->input->post('telefono')
                 );
                  return $this->db->insert('maestro', $data); 
         }
@@ -34,7 +36,9 @@ class Maestro_model extends CI_Model {
                 $id= $this->input->post("id");
                 $data = array(
                         'nombre' => $this->input->post('nombre'),
-                        'apellido' => $this->input->post('apellido')
+                        'apellido' => $this->input->post('apellido'),
+                        'direccion'=>$this->input->post('direccion'),
+                        'telefono'=>$this->input->post('telefono')
                 );
                 
                 return $this->db->update('maestro', $data, array('id' => $id));

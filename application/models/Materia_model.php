@@ -22,7 +22,6 @@ class Materia_model extends CI_Model {
         public function set_materia()
         {
                 $data = array(
-                        'id'=>$this->input->post('id'),
                         'nombre' => $this->input->post('nombre')
                       
                 );

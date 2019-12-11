@@ -28,9 +28,11 @@ class Maestro_controller extends CI_Controller {
                 $data['title'] = 'Nuevo maestro';
 
                 
-                $this->form_validation->set_rules('id', 'Id', 'required');
+                $this->form_validation->set_rules('id', 'Clave', 'required');
                 $this->form_validation->set_rules('nombre', 'Nombre', 'required');
                 $this->form_validation->set_rules('apellido', 'Apellido', 'required');
+                $this->form_validation->set_rules('direccion','Direccion','required');
+                $this->form_validation->set_rules('telefono','Telefono','required');
 
                 if ($this->form_validation->run() === FALSE)
                 {
@@ -57,6 +59,9 @@ class Maestro_controller extends CI_Controller {
                 
                 $this->form_validation->set_rules('nombre', 'Nombre', 'required');
                 $this->form_validation->set_rules('apellido', 'Apellido', 'required');
+                $this->form_validation->set_rules('direccion','Direccion','required');
+                $this->form_validation->set_rules('telefono','Telefono','required');
+
 
                 if ($this->form_validation->run() === FALSE)
                 {

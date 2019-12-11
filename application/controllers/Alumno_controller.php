@@ -28,7 +28,7 @@ class Alumno_controller extends CI_Controller {
                 $this->form_validation->set_rules('id', 'Id', 'required');
                 $this->form_validation->set_rules('nombre', 'Nombre', 'required');
                 $this->form_validation->set_rules('apellido', 'Apellido', 'required');
-                $this->form_validation->set_rules('id_grupo', 'Id_grupo', 'required');
+               
 
                 if ($this->form_validation->run() === FALSE)
                 {
@@ -54,7 +54,7 @@ class Alumno_controller extends CI_Controller {
               
                 $this->form_validation->set_rules('nombre', 'Nombre', 'required');
                 $this->form_validation->set_rules('apellido', 'Apellido', 'required');
-                $this->form_validation->set_rules('id_grupo', 'Id_grupo', 'required');
+                
 
                 if ($this->form_validation->run() === FALSE)
                 {
