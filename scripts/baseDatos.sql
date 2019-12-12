@@ -3,7 +3,8 @@ create database sistemaescolar;
 use sistemaescolar;
 
 create table maestro(
-    id int not null,
+    id int AUTO_INCREMENT not null,
+    clave int not null,
     nombre varchar(30) not null,
     apellido varchar(30) not null,
     direccion varchar(30) not null,
@@ -23,11 +24,21 @@ create table carrera(
     primary key(id)
 );
 
+create table cuatrimestre(
+    id int AUTO_INCREMENT  not null,
+    descripcion varchar(35) not null,
+    primary key (id)
+)
+
+
 create table grupo(
     id int AUTO_INCREMENT not null,
     letra varchar(1) not null,
-    turno varchar(15) not null,
-    primary key(id)
+    modalidad varchar(30) not null,
+    id_carrera int not null,
+    cicloEscolar varchar(30) not null,
+    primary key(id),
+    foreign key(id_carrera) references carrera(id)
 );
 
 
@@ -38,26 +49,28 @@ create table clase(
     horario varchar(30) not null,
     id_maestro int not null,
     id_cuatrimestre int not null
+    id_carrera int not null,
     primary key(id),
     foreign key(id_grupo) references grupo(id),
     foreign key(id_materia) references materia(id),
-    foreign key(id_maestro) references maestro(id)
+    foreign key(id_maestro) references maestro(id),
+    foreign key(id_carrera) references carrera(id),
+    foreign key(id_cuatrimestre) references cuatrimestre(id)
 );
 
-create table cuatrimestre(
-    id int AUTO_INCREMENT  not null,
-    descripcion varchar(35) not null,
-    primary key (id)
-)
 
 
 create table alumno(
-    id int not null,
+    id int AUTO_INCREMENT not null,
+    matricular int not null,
     nombre varchar(30) not null,
     apellido varchar(30) not null,
+    id_grupo int not null,
     id_cuatrimestre int not null,
+    sexo varchar(20) not null,
     primary key(id),
-    foreign key(id_cuatrimestre) references cuatrimestre(id)
+    foreign key(id_cuatrimestre) references cuatrimestre(id),
+    foreign key(id_grupo) references grupo(id)
 );
 
 create table calificacion(

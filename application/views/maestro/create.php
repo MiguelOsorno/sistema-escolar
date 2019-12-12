@@ -4,8 +4,8 @@
 
 <?php echo form_open('maestro/create'); ?>
 
-    <label for="id">Clave:</label>
-    <input type="text" name="id" /><br />
+    <label for="clave">Clave:</label>
+    <input type="text" name="clave" /><br />
 
     <label for="nombre">Nombre:</label>
     <input type="text" name="nombre" /><br />
