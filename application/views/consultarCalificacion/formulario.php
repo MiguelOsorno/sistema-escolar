@@ -1,4 +1,3 @@
-<html>
 <h2><?php echo $title; ?></h2>
 
 <?php echo validation_errors(); ?>
@@ -28,4 +27,3 @@
     <input type="submit" name="submit" value="consultar" />
 
 </form>
-</html>
