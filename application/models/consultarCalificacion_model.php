@@ -9,6 +9,7 @@ class consultarCalificacion_model extends CI_Model
     public function getCalificaciones()
     {
         $matricula = $_REQUEST['matricula'];
+        $cuatrimestre = $_REQUEST['cuatrimestre'];
 
         $sql = "SELECT
                 calificacion.valor,
@@ -22,9 +23,9 @@ class consultarCalificacion_model extends CI_Model
                 INNER JOIN materia ON calificacion.id_materia = materia.id)
                 INNER JOIN maestro ON calificacion.id_maestro = maestro.id)
 
-                WHERE alumno.matricula = ?";
+                WHERE alumno.matricula = ? AND calificacion.id_cuatrimestre = ?";
 
-        $query = $this->db->query($sql, array($matricula));
+        $query = $this->db->query($sql, array($matricula, $cuatrimestre));
 
         return $query->result_array();
     }
