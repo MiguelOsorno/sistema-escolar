@@ -4,8 +4,12 @@
 <?php echo validation_errors(); ?>
 <?php echo form_open('consultarCalificacion/formulario'); ?>
 
-    <label for="id">Matricula:</label>
-    <input type="text" name="id" /><br />
+    <label for="matricula">Matricula:</label>
+    <select name="matricula">
+    <?php foreach ($alumnos as $alumno_item): ?>
+        <?php echo '<option value="' . $alumno_item['matricula'] . '">' . $alumno_item['matricula'] . " - " . $alumno_item['nombre'] . '</option>' ?>
+    <?php endforeach;?>
+    </select>
 
     <input type="submit" name="submit" value="consultar" />
 

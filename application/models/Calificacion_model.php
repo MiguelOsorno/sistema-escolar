@@ -11,10 +11,10 @@ class Calificacion_model extends CI_Model
     {
 
         $sql = "SELECT
-                materia.id,
                 materia.nombre as materia_nombre,
                 maestro.nombre as maestro_nombre,
                 alumno.nombre as alumno_nombre,
+                alumno.apellido as alumno_apellido,
                 calificacion.valor,
                 calificacion.estado,
                 calificacion.id,
@@ -23,7 +23,7 @@ class Calificacion_model extends CI_Model
                 INNER JOIN cuatrimestre ON calificacion.id_cuatrimestre = cuatrimestre.id)
                 INNER JOIN maestro ON calificacion.id_maestro= maestro.id)
                 INNER JOIN alumno ON calificacion.id_alumno = alumno.id)
-                INNER JOIN materia ON calificacion.id_materia = materia.id) ORDER BY calificacion.id desc";
+                INNER JOIN materia ON calificacion.id_materia = materia.id) ORDER BY calificacion.id asc";
 
         $query = $this->db->query($sql);
 
@@ -42,8 +42,8 @@ class Calificacion_model extends CI_Model
     {
         $data = array(
             'id_materia' => $_REQUEST['id_materia'],
-            'id_maestro' => $this->input->post('id_maestro'),
-            'id_alumno' => $this->input->post('id_alumno'),
+            'id_maestro' => $_REQUEST['id_maestro'],
+            'id_alumno' => $_REQUEST['id_alumno'],
             'valor' => $this->input->post('valor'),
             'estado' => $_REQUEST['estado'],
             'id_cuatrimestre' => $_REQUEST['cuatrimestre'],

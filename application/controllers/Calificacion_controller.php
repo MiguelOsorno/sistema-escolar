@@ -7,6 +7,8 @@ class Calificacion_controller extends CI_Controller
         parent::__construct();
         $this->load->model('calificacion_model');
         $this->load->model('materia_model');
+        $this->load->model('maestro_model');
+        $this->load->model('alumno_model');
         $this->load->helper('url_helper');
     }
 
@@ -27,12 +29,11 @@ class Calificacion_controller extends CI_Controller
 
         $data['title'] = 'Nueva Calificacion';
 
-        $this->form_validation->set_rules('id_alumno', 'Id_alumno', 'required');
-        $this->form_validation->set_rules('id_maestro', 'Id_maestro', 'required');
         $this->form_validation->set_rules('valor', 'Valor', 'required');
-        $this->form_validation->set_rules('estado', 'Estado', 'required');
 
         $data['materias'] = $this->materia_model->get_materias();
+        $data['maestros'] = $this->maestro_model->get_maestros();
+        $data['alumnos'] = $this->alumno_model->get_alumnos();
 
         if ($this->form_validation->run() === false) {
             $this->load->view('templates/header', $data);

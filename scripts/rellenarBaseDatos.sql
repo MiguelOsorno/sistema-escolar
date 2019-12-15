@@ -250,33 +250,33 @@ values(3,3,20,10,'Aprobado',1);
 
 
 
-insert into clase(id_grupo,id_materia,horario,id_maestro,id_cuatrimestre,id_carrera)
-values(1,1,"8:00am-9:00am",1,1,1);
-insert into clase(id_grupo,id_materia,horario,id_maestro,id_cuatrimestre,id_carrera)
-values(1,2,"9:00am-10:00am",2,1,1);
-insert into clase(id_grupo,id_materia,horario,id_maestro,id_cuatrimestre,id_carrera)
-values(1,3,"10:00am-11:00am",3,1,1);
+insert into clase(id_grupo,id_materia,horario,id_maestro,id_cuatrimestre)
+values(1,1,"8:00am-9:00am",1,1);
+insert into clase(id_grupo,id_materia,horario,id_maestro,id_cuatrimestre)
+values(1,2,"9:00am-10:00am",2,1);
+insert into clase(id_grupo,id_materia,horario,id_maestro,id_cuatrimestre)
+values(1,3,"10:00am-11:00am",3,1);
 
-insert into clase(id_grupo,id_materia,horario,id_maestro,id_cuatrimestre,id_carrera)
-values(2,1,"9:00am-10:00am",1,1,1);
-insert into clase(id_grupo,id_materia,horario,id_maestro,id_cuatrimestre,id_carrera)
-values(2,2,"8:00am-9:00am",2,1,1);
-insert into clase(id_grupo,id_materia,horario,id_maestro,id_cuatrimestre,id_carrera)
-values(2,3,"12:00am-1:00pm",3,1,1);
+insert into clase(id_grupo,id_materia,horario,id_maestro,id_cuatrimestre)
+values(2,1,"9:00am-10:00am",1,1);
+insert into clase(id_grupo,id_materia,horario,id_maestro,id_cuatrimestre)
+values(2,2,"8:00am-9:00am",2,1);
+insert into clase(id_grupo,id_materia,horario,id_maestro,id_cuatrimestre)
+values(2,3,"12:00am-1:00pm",3,1);
 
-insert into clase(id_grupo,id_materia,horario,id_maestro,id_cuatrimestre,id_carrera)
-values(3,1,"11:00am-12:00am",1,1,2);
-insert into clase(id_grupo,id_materia,horario,id_maestro,id_cuatrimestre,id_carrera)
-values(3,2,"10:00am-11:00am",2,1,2);
-insert into clase(id_grupo,id_materia,horario,id_maestro,id_cuatrimestre,id_carrera)
-values(3,3,"8:00am-9:00am",3,1,2);
+insert into clase(id_grupo,id_materia,horario,id_maestro,id_cuatrimestre)
+values(3,1,"11:00am-12:00am",1,1);
+insert into clase(id_grupo,id_materia,horario,id_maestro,id_cuatrimestre)
+values(3,2,"10:00am-11:00am",2,1);
+insert into clase(id_grupo,id_materia,horario,id_maestro,id_cuatrimestre)
+values(3,3,"8:00am-9:00am",3,1);
 
-insert into clase(id_grupo,id_materia,horario,id_maestro,id_cuatrimestre,id_carrera)
-values(4,1,"10:00am-11:00am",1,1,2);
-insert into clase(id_grupo,id_materia,horario,id_maestro,id_cuatrimestre,id_carrera)
-values(4,2,"11:00am-12:00am",2,1,2);
-insert into clase(id_grupo,id_materia,horario,id_maestro,id_cuatrimestre,id_carrera)
-values(4,3,"9:00am-10:00am",3,1,2);
+insert into clase(id_grupo,id_materia,horario,id_maestro,id_cuatrimestre)
+values(4,1,"10:00am-11:00am",1,1);
+insert into clase(id_grupo,id_materia,horario,id_maestro,id_cuatrimestre)
+values(4,2,"11:00am-12:00am",2,1);
+insert into clase(id_grupo,id_materia,horario,id_maestro,id_cuatrimestre)
+values(4,3,"9:00am-10:00am",3,1);
 
 
 
